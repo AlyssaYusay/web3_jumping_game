@@ -260,7 +260,7 @@ function loadImagesOfMintedNfts() {
             console.log(`element with id ${i} is minted`)
             const nft1 = document.getElementById(i)
             const att = document.createAttribute("style");
-            att.value = `content:url(./skins/${i}.png)`
+            att.value = `content:url(./skins/${i}.jpg)`
             nft1.setAttributeNode(att);
         }
     }
