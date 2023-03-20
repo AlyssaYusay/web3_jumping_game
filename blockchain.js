@@ -18,7 +18,7 @@ async function mintOrSelect(element) {
     alert("you need score to mint nft");
     return;
   }
-  const skinsContractAddress = "0xeA917733cF4028B90b6229273446C057Bc681164";
+  const skinsContractAddress = "0xeA917733cF4028B90b6229273446C057Bc681164"; // Update contract address if you deplyed a new one and want to try your deplyed smart contract
   const skinsCollectionAbi = [
     "function mint(string memory tokenURI) public returns (uint256)",
   ];
@@ -29,7 +29,7 @@ async function mintOrSelect(element) {
   );
 
   if (localStorage.getItem(element.id) == null) {
-    const cidOfJsonFiles = "QmcuaiLwmwr2s91VJwe5jXmm4JzocS3h6JtPviX7SKsLJW";
+    const cidOfJsonFiles = "QmcuaiLwmwr2s91VJwe5jXmm4JzocS3h6JtPviX7SKsLJW"; // Update the CID for the metadata if you have decided to change the skins for the game
     const tokenURI =
       `https://ipfs.io/ipfs/${cidOfJsonFiles}/` + element.id + ".json";
     const tx = await skinsContract.connect(signer).mint(tokenURI);
