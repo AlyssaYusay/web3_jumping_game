@@ -31,7 +31,7 @@ async function mintOrSelect(element) {
   if (localStorage.getItem(element.id) == null) {
     const cidOfJsonFiles = "QmcuaiLwmwr2s91VJwe5jXmm4JzocS3h6JtPviX7SKsLJW"; // Update the CID for the metadata if you have decided to change the skins for the game
     const tokenURI =
-      `https://ipfs.io/ipfs/${cidOfJsonFiles}/` + element.id + ".json";
+      `https://ipfs.io/ipfs/${cidOfJsonFiles}/` + element.id + ".json"; // https://ipfs.io/ipfs/QmcuaiLwmwr2s91VJwe5jXmm4JzocS3h6JtPviX7SKsLJW/1.json
     const tx = await skinsContract.connect(signer).mint(tokenURI);
     await tx.wait();
 
